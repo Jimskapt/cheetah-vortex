@@ -1,0 +1,14 @@
+alpha
+beta
+gamma
+delta
+
+# you can comment each line with an "#"
+
+cheetah
+lion
+
+# empty lines are ignored
+
+vortex
+hurricane

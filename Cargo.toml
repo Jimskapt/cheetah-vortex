@@ -1,0 +1,7 @@
+[package]
+name = "cheetah-vortex"
+version = "1.0.0"
+authors = ["Jimskapt <rami.programmer@gmail.com>"]
+
+[dependencies]
+rand = "0.5"
