@@ -1,5 +1,2 @@
 /target
 **/*.rs.bk
-
-list*.txt
-!list_example.txt

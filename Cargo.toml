@@ -1,7 +1,9 @@
 [package]
 name = "cheetah-vortex"
-version = "1.0.0"
+version = "1.2.0"
 authors = ["Jimskapt <rami.programmer@gmail.com>"]
 
 [dependencies]
-rand = "0.5"
+rand = "^0"
+clap = "3.0.0-beta.1"
+dunce = "^1"

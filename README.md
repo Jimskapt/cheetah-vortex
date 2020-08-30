@@ -2,20 +2,44 @@
 
 A name generator from a source file.
 
+## Usage
+
+```txt
+cheetah-vortex 1.2.0
+
+USAGE:
+    cheetah-vortex [FLAGS] [OPTIONS] [INPUT]
+
+ARGS:
+    <INPUT>    Path of the input file (which contains words) [default: ./list.txt]
+
+FLAGS:
+    -h, --about         Prints about information
+        --help          Prints help information
+    -s, --no-restart    Does not prompt "regenerate a new set" at the end (it closes the program directly)
+    -q, --quiet         Only prompt generated result, without further text (except errors)
+    -V, --version       Prints version information
+
+OPTIONS:
+    -i, --items <items_per_row>           Number of items combined per row [default: 2]
+    -r, --rows <rows_generation_limit>    Number of rows generated on each run [default: 10]
+```
+
 ## Quick start
 
-Create a file, name it as you want (like `list_example.txt`).
+Create a file, name it as you want (like `test.txt`).
 
 You have to fill it with a potentially name on each line, like :
 
-In `list_example.txt` :
-```
+In `test.txt` :
+
+```txt
 alpha
 beta
 gamma
 delta
 
-# you can comment each line with an "#"
+# you can comment each line starting with an "#"
 
 cheetah
 lion
@@ -26,11 +50,13 @@ vortex
 hurricane
 ```
 
-Now download and launch the executable (like `cheetah-vortex.exe` on Windows) in a command-line :
+Now download and launch the executable (like `cheetah-vortex.exe` for Windows) in a command-line :
+
 ```cmd
-> cheetah-vortex.exe list_example.txt
-Cheetah Vortex 1.0.0
-Source file : list_example.txt
+> cheetah-vortex.exe test.txt
+Starting cheetah-vortex V1.2.0
+
+Currently using input file : test.txt
 
 lion cheetah
 vortex gamma
@@ -44,12 +70,13 @@ gamma hurricane
 lion beta
 ```
 
-You can restart the program, names are randomly choosen each time :
+You can restart the program, names are randomly selected each time :
 
 ```cmd
-> cheetah-vortex.exe list_example.txt
-Cheetah Vortex 1.0.0
-Source file : list_example.txt
+> cheetah-vortex.exe test.txt
+Starting cheetah-vortex V1.2.0
+
+Currently using input file : test.txt
 
 lion delta
 beta vortex

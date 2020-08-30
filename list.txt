@@ -3,7 +3,7 @@ beta
 gamma
 delta
 
-# you can comment each line with an "#"
+# you can comment each line starting with an "#"
 
 cheetah
 lion
