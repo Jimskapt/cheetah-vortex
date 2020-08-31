@@ -5,7 +5,7 @@ A name generator from a source file.
 ## Usage
 
 ```txt
-cheetah-vortex 1.2.0
+cheetah-vortex 1.3.0
 
 USAGE:
     cheetah-vortex [FLAGS] [OPTIONS] [INPUT]
@@ -16,13 +16,14 @@ ARGS:
 FLAGS:
     -h, --about         Prints about information
         --help          Prints help information
-    -s, --no-restart    Does not prompt "regenerate a new set" at the end (it closes the program directly)
-    -q, --quiet         Only prompt generated result, without further text (except errors)
+    -s, --no-restart    Does not ask for "regenerate a new set" at the end (it closes the program directly)
+    -q, --quiet         Only prompt generated result, without further text (except errors and restart)
     -V, --version       Prints version information
 
 OPTIONS:
     -i, --items <items_per_row>           Number of items combined per row [default: 2]
     -r, --rows <rows_generation_limit>    Number of rows generated on each run [default: 10]
+        --separator <separator>           The separator between words [default:  ]
 ```
 
 ## Quick start
@@ -54,7 +55,7 @@ Now download and launch the executable (like `cheetah-vortex.exe` for Windows) i
 
 ```cmd
 > cheetah-vortex.exe test.txt
-Starting cheetah-vortex V1.2.0
+Starting cheetah-vortex V1.3.0
 
 Currently using input file : test.txt
 
@@ -74,7 +75,7 @@ You can restart the program, names are randomly selected each time :
 
 ```cmd
 > cheetah-vortex.exe test.txt
-Starting cheetah-vortex V1.2.0
+Starting cheetah-vortex V1.3.0
 
 Currently using input file : test.txt
 

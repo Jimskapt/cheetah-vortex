@@ -5,6 +5,7 @@ fn main() {
 	let default_items_str = default_items.to_string();
 	let default_rows: u32 = 10;
 	let default_rows_str = default_rows.to_string();
+	let default_separator = String::from(" ");
 
 	let mut app = clap::App::new(env!("CARGO_PKG_NAME"))
 		.version(env!("CARGO_PKG_VERSION"))
@@ -26,6 +27,14 @@ fn main() {
 				.takes_value(true)
 				.required(false)
 				.default_value(&default_rows_str),
+		)
+		.arg(
+			clap::Arg::with_name("separator")
+				.long("separator")
+				.about("The separator between words")
+				.takes_value(true)
+				.required(false)
+				.default_value(&default_separator),
 		)
 		.arg(
 			clap::Arg::with_name("no-restart")
@@ -67,6 +76,7 @@ fn main() {
 	let generation_limit = matches
 		.value_of("rows_generation_limit")
 		.unwrap_or_default();
+	let separator = matches.value_of("separator").unwrap_or_default();
 	let file_path = matches.value_of("INPUT").unwrap_or_default();
 
 	if !matches.is_present("about") {
@@ -132,7 +142,7 @@ fn main() {
 					let id: usize = (id * list.len() as f64) as usize;
 
 					if name != "" {
-						name.push_str(" ");
+						name.push_str(separator);
 					}
 					name.push_str(list.get(id).unwrap());
 				}
