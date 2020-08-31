@@ -8,14 +8,13 @@ A name generator from a source file.
 cheetah-vortex 1.3.0
 
 USAGE:
-    cheetah-vortex [FLAGS] [OPTIONS] [INPUT]
+    cheetah-vortex.exe [FLAGS] [OPTIONS] [INPUT]
 
 ARGS:
     <INPUT>    Path of the input file (which contains words) [default: ./list.txt]
 
 FLAGS:
-    -h, --about         Prints about information
-        --help          Prints help information
+    -h, --help          Prints help information
     -s, --no-restart    Does not ask for "regenerate a new set" at the end (it closes the program directly)
     -q, --quiet         Only prompt generated result, without further text (except errors and restart)
     -V, --version       Prints version information

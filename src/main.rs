@@ -53,14 +53,6 @@ fn main() {
 				.required(false)
 		)
 		.arg(
-			clap::Arg::with_name("about")
-				.short('h')
-				.long("about")
-				.about("Prints about information")
-				.takes_value(false)
-				.required(false)
-		)
-		.arg(
 			clap::Arg::with_name("INPUT")
 				.about("Path of the input file (which contains words)")
 				.required(false)
